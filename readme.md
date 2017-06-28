@@ -2,7 +2,7 @@
 
 Let me add some text.
 
-For drawing dynamic stimuli of various species. You can draw a picture directly, or make a category to draw instances of later. Any properties unspecified will be randomly sampled. [Here's an example of the pretty pictures this script can draw](http://www.stanford.edu/~erindb/stimuli/large-ecosystem.html) (refresh the page to see the randomness).
+For drawing dynamic stimuli of various species. You can draw a picture directly, or make a category to draw instances of later. Any properties unspecified will be randomly sampled. [Here's an example of the pretty pictures (svg files) this script can draw](http://www.stanford.edu/~erindb/stimuli/large-ecosystem.html) (refresh the page to see the randomness).
 
 ## categories:
 
@@ -43,9 +43,9 @@ This is the code used in `ecosystem-demo.html` which can be viewed [here](http:/
 				 "prop2":0},
 		"svgID", scale)
 
-This will draw a bug at half the default size (250px x 250px) with a red crest, green body, blue wing, no tail, with a short and skinny body and fat head.
+This will draw a bird at half the default size (250px x 250px) with a red crest, green body, blue wing, no tail, with a short and skinny body and fat head.
 
-You can specify all of these properties, or only some of them. You can even pass in an empty object `{}` if want *all* of the properties to be randomly sampled:
+You can specify all of these properties, or only some of them. The properties not specified will be generated randomly. You can even pass in an empty object `{}` if want *all* of the properties to be randomly sampled:
 
 	var scale = 0.5;
 	Ecosystem.draw("bird", {}, "svgID", scale)
@@ -78,7 +78,7 @@ In the list below are all the properties you can specify for the critters that c
 
 When you instantiate a category, you pass in a *means-and-variances* object. When you draw a critter, you pass in a *properties* object. The property names (listed below) are the same for both kinds of objects (except that *means-and-variances* has one additional specifiable property name), but **the values attached to those property names are not the same**.
 
-For example, when I want to specify a color (col1) for drawing:
+For example, when I want to specify a color (col1) for drawing a genus:
 
 	genus.draw({"col1":"#ff0000"}})
 
